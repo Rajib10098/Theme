@@ -1,1 +1,1 @@
-# Store theme code for blogg
+# Store theme code for the blog
