@@ -1,0 +1,183 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --p: hsl(0, 0%, 10%);
+    --h: hsl(0, 0%, 20%);
+    --em: hsl(0, 0%, 30%);
+    --code: hsl(0, 0%, 30%);
+    --code-bg: hsl(0, 0%, 90%);
+    --table-header-bg: hsl(237, 100%, 60%);
+    --table-header-color: hsl(0, 0%, 100%);
+    --table-accent-bg: hsl(0, 1%, 90%);
+    --table-border-color: hsl(0, 0%, 70%);
+    --copy-bg: hsl(0, 0%, 80%);
+    --copy-border: hsl(0, 0%, 60%);
+    --copy-color: hsl(0, 0%, 20%);
+    --pre-bg: hsl(0, 0%, 95%);
+    --pre-border-color: hsl(0, 0%, 70%);
+    --pre-color: rgb(63, 62, 62);
+}
+
+/*Container CSS*/
+.section {
+    max-width: 1000px;
+    padding: 0 15px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+ol {
+    margin: 10px 40px;
+}
+
+h1,
+h2 {
+    margin: 20px 0;
+}
+
+h3 {
+    margin: 15px 0;
+}
+
+p {
+    margin: 20px 0;
+    line-height: 1.5rem;
+}
+
+h4 {
+    margin: 15px 0;
+}
+
+blockquote p {
+    padding: 0;
+    margin: 10px 0;
+}
+
+blockquote {
+    font-size: .9rem;
+    border-left: 2px solid var(--primary);
+    background-color: var(--blockquote);
+    color: var(--blockquote-color);
+    padding: 5px 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+code {
+    font-size: .7rem;
+    background-color: var(--code);
+    font-family: monospace;
+    padding: 0 4px;
+    border-radius: 3px;
+}
+
+pre code {
+    display: block;
+    background: var(--code-box);
+    overflow: scroll;
+    padding: 10px;
+}
+pre {
+    position: relative;
+    z-index: -1;
+}
+
+/*Table*/
+table {
+    margin: 10px 0;
+    border-spacing: 0;
+}
+
+table td,
+table th {
+    border: 1px solid var(--border-table);
+    padding: 8px;
+}
+
+table tr:nth-child(even) {
+    background-color: var(--background);
+}
+
+/* table tr:hover {background-color: #ddd;} */
+
+table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--primary);
+    color: white;
+}
+
+/*Image*/
+.tr-caption-container tbody tr,
+.tr-caption-container tbody tr td {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 3px;
+}
+
+.tr-caption-container tbody tr,
+.tr-caption-container tbody tr td {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 3px;
+    color: var(--accent);
+}
+
+.tr-caption {
+    font-style: italic;
+    font-size: .8rem;
+}
+
+.timestamp-link {
+    color: var(--Theme_color);
+    text-decoration-color: var(--accent);
+}
+
+a {
+    color: var(--links);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--links-hover);
+    text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #161818;
+        color: white;
+        /* font-family: &#39;
+        Poppins&#39;
+        ; */
+        font-weight: 400;
+    }
+
+    :root {
+        --p: hsl(180, 5%, 85%);
+        --h: hsl(180, 5%, 92%);
+        --em: hsl(0, 0%, 50%);
+        --code: hsl(0, 0%, 50%);
+        --code-bg: hsl(0, 0%, 0%);
+        --table-header-bg: hsl(237, 100%, 60%);
+        --table-header-color: hsl(0, 0%, 100%);
+        --table-accent-bg: hsl(0, 1%, 20%);
+        --table-border-color: hsl(0, 0%, 30%);
+        --copy-bg: hsl(0, 0%, 10%);
+        --copy-border: hsl(0, 0%, 30%);
+        --copy-color: hsl(0, 0%, 90%);
+        --pre-bg: hsl(0, 0%, 5%);
+        --pre-border-color: hsl(0, 0%, 15%);
+        --pre-color: rgb(162, 162, 162);
+    }
+}

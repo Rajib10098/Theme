@@ -1,0 +1,1025 @@
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b"
+    xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
+<!--THIS CODE HAD TO REMOV "b:css='false' b:js='false'"-->
+
+<head>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>CSS - Table</title>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta content="" name="theme-color">
+    <!-- Windows Phone -->
+    <meta content="" name="msapplication-navbutton-color">
+    <meta content="blogger" name="generator">
+    <link href="https://demoblog61.blogspot.com/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="https://demoblog61.blogspot.com/2023/11/css-table.html" rel="canonical">
+    <link rel="alternate" type="application/atom+xml" title="bicycle i - Atom"
+        href="https://demoblog61.blogspot.com/feeds/posts/default">
+    <link rel="alternate" type="application/rss+xml" title="bicycle i - RSS"
+        href="https://demoblog61.blogspot.com/feeds/posts/default?alt=rss">
+    <link rel="service.post" type="application/atom+xml" title="bicycle i - Atom"
+        href="https://www.blogger.com/feeds/8695350722128024733/posts/default">
+
+    <link rel="alternate" type="application/atom+xml" title="bicycle i - Atom"
+        href="https://demoblog61.blogspot.com/feeds/3154623879985077205/comments/default">
+    <!--Can't find substitution for tag [blog.ieCssRetrofitLinks]-->
+    <meta content="https://demoblog61.blogspot.com/2023/11/css-table.html" property="og:url">
+    <meta content="CSS - Table" property="og:title">
+    <meta content="" property="og:description">
+    <!-- Content to display if the condition is true (i.e., it's a blog post) -->
+    <script defer="defer"
+        src="https://cdn.jsdelivr.net/gh/Rajib10098/Links@main/template/script/copy-button.js"></script>
+    <script defer="defer"
+        src="https://cdn.jsdelivr.net/gh/Rajib10098/Links@main/template/script/color-source-code.js"></script>
+    <style>
+        body {
+            background-color: var(--background);
+            color: var(--text);
+        }
+    </style>
+    <script defer="defer"
+        src="https://cdn.jsdelivr.net/gh/Rajib10098/Links@main/Header-Search/header-search.js"></script>
+    <!--HEADER CSS-->
+    <style>
+        :root {
+            --shadow: hsl(0, 0%, 90%);
+            --links: hsl(230, 70%, 40%);
+            --links-hover: hsl(230, 100%, 20%);
+            --table: hsl(230, 50%, 90%);
+            --border-table: hsl(230, 40%, 80%);
+            --primary-color: hsl(0, 0%, 100%);
+
+            --code-box: hsl(0, 0%, 95%);
+
+            --title-hover: hsl(230, 35%, 30%);
+
+            --code: hsl(0, 0%, 70%);
+
+            --blockquote: hsl(0, 0%, 86%);
+            --blockquote-color: hsl(0, 0%, 0%);
+            --blockquote-border: hsl(0, 0%, 50%);
+
+            --text: hsl(164, 45%, 10%);
+            --background: hsl(0, 0%, 98%);
+            --primary: hsl(230, 50%, 40%);
+            --secondary: hsl(115, 9%, 80%);
+            --accent: hsl(15, 47%, 49%);
+
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            font-size: 1rem;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: var(--text);
+        }
+
+        header {
+            height: 50px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            box-shadow: 1px 2px 3px var(--shadow);
+            border-bottom: 1px solid var(--secondary);
+        }
+
+        main {
+            margin-top: 50px;
+        }
+
+        .header_con {
+            height: 50px;
+            border-bottom: 1px solid var(--light_border_color);
+            background-color: var(--background);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+
+        }
+
+        .header_logo {
+            background: linear-gradient(120deg, var(--primary), var(--secondary));
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header_link {
+            text-decoration: none;
+        }
+
+        .header_left_con {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .close_m_menu {
+            display: none;
+        }
+
+        .header_link ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .header_link_con {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header_link ul li {
+            padding: 0 30px;
+        }
+
+        .header_link ul li a {
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .header_link ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .divider {
+            height: 30px;
+            width: 4px;
+            background-color: var(--Theme_color);
+            border-radius: 2px;
+            margin: 0 30px 0 0;
+        }
+
+        /* HEADER CSS END  */
+        .search_bar {
+            overflow: hidden;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            height: 40px;
+            width: 500px;
+            border-radius: 20px;
+            background-color: var(--background);
+            border: 2px solid var(--primary);
+            transition: 300ms;
+            transition-property: width;
+        }
+
+        .hide_search_bar {
+            width: 40px;
+            border: 2px solid transparent;
+            transition-property: width;
+            transition: 300ms;
+        }
+
+        .hide_search_bar_button {
+            border: none;
+            padding: 5px;
+            background-color: transparent;
+            width: 40px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: 300ms;
+        }
+
+        .hide_search_bar_button_hide {
+            width: 0;
+            padding: 5px 0;
+            transition: 300ms;
+        }
+
+        .hide_search_bar_svg {
+            height: 30px;
+            width: 30px;
+            stroke: var(--primary);
+        }
+
+        .api_search_result_con {
+            width: 100%;
+            /* height: 100%; */
+            position: absolute;
+            background-color: var(--background);
+            top: 50px;
+            right: 0;
+            border-radius: 10px;
+            transition-property: height;
+            transition: 300ms;
+            transition-delay: 300ms;
+            z-index: 2;
+
+        }
+
+        .hide_api_search_result_con {
+            width: 100%;
+            height: 0;
+            border-radius: 20%;
+            opacity: 0;
+            transition-property: opacity;
+            transition: 100ms;
+
+        }
+
+        /* SEARCH RESULT */
+        .api_search_status span,
+        .content_status span {
+            color: var(--text_secondary);
+            font-size: 17px;
+        }
+
+
+        .content_status {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* height: 40px; */
+            padding: 53px;
+            border-top: 1px dashed var(--search_result_card_border);
+            border-bottom: 1px dashed var(--search_result_card_border);
+        }
+
+        .search_result_card_con {
+            display: flex;
+            cursor: pointer;
+            padding: 20px;
+            /* width: 450px; */
+            /* border: 2px rgba(128, 128, 128, 0.549); */
+            /* border-radius: 5px; */
+            border-top: 1px dashed var(--search_result_card_border);
+            border-bottom: 1px dashed var(--search_result_card_border);
+        }
+
+        .search_result_card_con:hover {
+            background-color: rgba(128, 128, 128, 0.168);
+        }
+
+        .search_result {
+            padding: 15px 0;
+        }
+
+        .api_search_status {
+            padding: 10px 20px 0 20px;
+        }
+
+        .search_result_card_title {
+            padding: 0 0 0 20px;
+            /* color: var(--light_color); */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-Line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+        .search_result_card_img_con {
+            border-radius: 5px;
+            width: 175px;
+            height: 98px;
+            border-radius: 4px;
+            overflow: hidden;
+            background-color: rgb(68, 68, 67);
+            flex-shrink: 0;
+        }
+
+        .search_result_card_con img {
+            width: 100%;
+        }
+
+        .clear_input_svg {
+            height: 30px;
+            width: 30px;
+            stroke: gray;
+        }
+
+        .close_menu_svg {
+            width: 30px;
+            height: 30px;
+            stroke: var(--text);
+        }
+
+        .search_svg {
+            height: 30px;
+            width: 30px;
+            fill: var(--primary);
+        }
+
+
+        .clear_input_button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            opacity: 0;
+            transition: 300ms;
+        }
+
+        .show_clear_button {
+            cursor: pointer;
+            opacity: 1;
+        }
+
+        .clear_input_button_hide {
+            width: 0;
+            overflow: hidden;
+            transition: 300ms;
+        }
+
+        .search_button {
+            border: none;
+            background-color: transparent;
+            height: 100%;
+            width: 40px;
+            /* padding: 6px; */
+            cursor: pointer;
+            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search_input {
+            width: 100%;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: var(--text);
+            transition: 300ms;
+        }
+
+        .search_input_hide {
+            width: 0;
+            transition: 300ms;
+        }
+
+        .hamburger_menu {
+            display: none;
+        }
+
+        .search_con {
+            position: relative;
+        }
+
+        @media (max-width: 1300px) {
+            .hide_header_left_con {
+                width: 100%;
+            }
+
+            .divider {
+                display: none;
+            }
+
+            .hamburger_menu {
+                border: none;
+                background-color: transparent;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0 0 0 20px;
+                cursor: pointer;
+            }
+
+            .hide_hamburger_menu {
+                display: none;
+            }
+
+            .hamburger_menu_svg {
+                width: 30px;
+                height: 30px;
+                fill: var(--text);
+            }
+
+            .close_m_menu {
+                display: flex;
+                justify-content: right;
+                align-items: center;
+                /* background-color: rgb(68, 68, 68); */
+                height: 50px;
+                border-bottom: 1px solid var(--accent);
+                padding: 0 20px;
+                width: 300px;
+                box-sizing: border-box;
+
+
+            }
+
+            .close_button {
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                border: none;
+                background: transparent;
+                flex-shrink: 1;
+            }
+
+            .header_link_con {
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 0;
+                overflow: hidden;
+                height: 100dvh;
+                z-index: 2;
+                transition: 50ms;
+                transition-property: width;
+            }
+
+            .show_mobile_menu {
+                width: 300px;
+                background-color: var(--mobile_menu);
+                height: 100dvh;
+                display: block;
+                z-index: 2;
+                box-shadow: -3px 0px 24px 6px var(--mobile_menu_shadow);
+                transition: 300ms;
+                transition-property: width;
+            }
+
+            .header_link ul {
+                display: block;
+            }
+
+            .header_link ul li {
+                height: 50px;
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid var(--accent);
+                border-top: 1px solid var(--accent);
+                margin: 0 20px;
+                cursor: pointer;
+                transition: 200ms;
+            }
+
+            .header_link ul li:hover {
+                background-color: var(--accent);
+                padding-left: 40px;
+                transition: 200ms;
+
+            }
+
+            .search_con {
+                width: 100%;
+                display: flex;
+                justify-content: right;
+                position: relative;
+                z-index: 1;
+
+            }
+
+            .search_bar {
+                width: 100%;
+                margin: 0 30px;
+            }
+
+            .hide_search_bar {
+                margin: 0;
+            }
+
+            .api_search_result_con {
+                display: flex;
+                width: 100%;
+                position: absolute;
+                top: 45px;
+                right: 0;
+                border-radius: 10px;
+                transition-property: height;
+                transition: 300ms;
+                flex-direction: column;
+
+            }
+
+            .hide_api_search_result_con {
+                width: 100%;
+                height: 0;
+                border-radius: 20%;
+                opacity: 0;
+                transition-delay: 300ms;
+                transition-property: opacity;
+                transition: 100ms;
+            }
+
+            .header_logo {
+                transition: 1ms;
+                transition-property: width;
+                width: 100%;
+                transition-delay: 200ms;
+            }
+
+            .hide_header_logo {
+                /* display: none; */
+                width: 0;
+                transition: 1ms;
+                transition-property: width;
+                overflow: hidden;
+                transition-delay: 0ms;
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .hamburger_menu {
+                margin: 0 30px 0 20px;
+            }
+
+            .hide_hamburger_menu {
+                margin: 0;
+
+            }
+
+            .header_logo {
+                margin: 0 0 0 20px;
+            }
+
+            .hide_header_logo {
+                /* display: none; */
+                margin: 0;
+            }
+
+            .header_con {
+                padding: 0;
+            }
+
+            .search_bar {
+                margin: 0 20px;
+            }
+
+            .hide_search_bar {
+                margin: 0;
+            }
+
+            .api_search_result_con {
+                border-radius: 0;
+            }
+
+            .api_search_result_con {
+                background-color: var(--background);
+
+            }
+
+            .hide_api_search_result_con {
+                transition: 1ms;
+                transition-property: opacity;
+                overflow: hidden;
+            }
+
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --shadow: hsl(0, 0%, 0%);
+                --links: hsl(230, 50%, 60%);
+                --links-hover: hsl(230, 47%, 70%);
+                --table: hsl(230, 50%, 0%);
+                --border-table: hsl(230, 40%, 22%);
+                --primary-color: hsl(0, 0%, 100%);
+                --code-box: hsl(0, 0%, 0%);
+
+                --code: hsl(0, 0%, 15%);
+
+                --title-hover: hsl(230, 10%, 70.2%);
+
+                --blockquote: hsl(0, 0%, 0%);
+                --blockquote-color: hsl(0, 0%, 70%);
+                --blockquote-border: hsl(0, 0%, 50%);
+
+                --text: #fcf8f8;
+                --background: #141414;
+                --primary: hsl(230, 50%, 40%);
+                --secondary: hwb(115 9% 81%);
+                --accent: #6161b3;
+
+            }
+        }
+    </style>
+    <!--Page and Post-->
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        :root {
+            --p: hsl(0, 0%, 10%);
+            --h: hsl(0, 0%, 20%);
+            --em: hsl(0, 0%, 30%);
+            --code: hsl(0, 0%, 30%);
+            --code-bg: hsl(0, 0%, 90%);
+            --table-header-bg: hsl(237, 100%, 60%);
+            --table-header-color: hsl(0, 0%, 100%);
+            --table-accent-bg: hsl(0, 1%, 90%);
+            --table-border-color: hsl(0, 0%, 70%);
+            --copy-bg: hsl(0, 0%, 80%);
+            --copy-border: hsl(0, 0%, 60%);
+            --copy-color: hsl(0, 0%, 20%);
+            --pre-bg: hsl(0, 0%, 95%);
+            --pre-border-color: hsl(0, 0%, 70%);
+            --pre-color: rgb(63, 62, 62);
+        }
+
+        /*Container CSS*/
+        .section {
+            max-width: 1000px;
+            padding: 0 15px;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul,
+        ol {
+            margin: 10px 40px;
+        }
+
+        h1,
+        h2 {
+            margin: 20px 0;
+        }
+
+        h3 {
+            margin: 15px 0;
+        }
+
+        p {
+            margin: 20px 0;
+            line-height: 1.5rem;
+        }
+
+        h4 {
+            margin: 15px 0;
+        }
+
+        blockquote p {
+            padding: 0;
+            margin: 10px 0;
+        }
+
+        blockquote {
+            font-size: .9rem;
+            border-left: 2px solid var(--primary);
+            background-color: var(--blockquote);
+            color: var(--blockquote-color);
+            padding: 5px 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+        }
+
+        code {
+            font-size: .7rem;
+            background-color: var(--code);
+            font-family: monospace;
+            padding: 0 4px;
+            border-radius: 3px;
+        }
+
+        pre code {
+            display: block;
+            background: var(--code-box);
+            overflow: scroll;
+            padding: 10px;
+        }
+
+        *Table*/ table {
+            border-spacing: 0;
+        }
+
+        table td,
+        table th {
+            border: 1px solid var(--border-table);
+            padding: 8px;
+        }
+
+        table tr:nth-child(even) {
+            background-color: var(--background);
+        }
+
+        /* table tr:hover {background-color: #ddd;} */
+
+        table th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: var(--primary);
+            color: white;
+        }
+
+        /*Image*/
+        .tr-caption-container tbody tr,
+        .tr-caption-container tbody tr td {
+            background: none;
+            border: none;
+            margin: 0;
+            padding: 3px;
+        }
+
+        .tr-caption-container tbody tr,
+        .tr-caption-container tbody tr td {
+            background: none;
+            border: none;
+            margin: 0;
+            padding: 3px;
+            color: var(--accent);
+        }
+
+        .tr-caption {
+            font-style: italic;
+            font-size: .8rem;
+        }
+
+        .timestamp-link {
+            color: var(--Theme_color);
+            text-decoration-color: var(--accent);
+        }
+
+        a {
+            color: var(--links);
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: var(--links-hover);
+            text-decoration: underline;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #161818;
+                color: white;
+                /* font-family: '
+            Poppins'
+            ; */
+                font-weight: 400;
+            }
+
+            :root {
+                --p: hsl(180, 5%, 85%);
+                --h: hsl(180, 5%, 92%);
+                --em: hsl(0, 0%, 50%);
+                --code: hsl(0, 0%, 50%);
+                --code-bg: hsl(0, 0%, 0%);
+                --table-header-bg: hsl(237, 100%, 60%);
+                --table-header-color: hsl(0, 0%, 100%);
+                --table-accent-bg: hsl(0, 1%, 20%);
+                --table-border-color: hsl(0, 0%, 30%);
+                --copy-bg: hsl(0, 0%, 10%);
+                --copy-border: hsl(0, 0%, 30%);
+                --copy-color: hsl(0, 0%, 90%);
+                --pre-bg: hsl(0, 0%, 5%);
+                --pre-border-color: hsl(0, 0%, 15%);
+                --pre-color: rgb(162, 162, 162);
+            }
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/gh/Rajib10098/Links@main/template/css/table%401.0.css" rel="stylesheet">
+    <link
+        href="https://www.blogger.com/dyn-css/authorization.css?targetBlogID=8695350722128024733&amp;zx=c6bcc5e3-d134-4746-afdc-fc1d65a645b4"
+        media="all" onload="if(media!='all')media='all'" rel="stylesheet"><noscript>
+        <link
+            href='https://www.blogger.com/dyn-css/authorization.css?targetBlogID=8695350722128024733&amp;zx=c6bcc5e3-d134-4746-afdc-fc1d65a645b4'
+            rel='stylesheet' />
+    </noscript>
+    <meta name="google-adsense-platform-account" content="ca-host-pub-1556223355139109">
+    <meta name="google-adsense-platform-domain" content="blogspot.com">
+
+    <script src="moz-extension://4b4c3f76-386a-46b9-8131-05211b237070/content/fido2/page-script.js"></script>
+</head>
+
+<body class="disable">
+    <header>
+        <div class="header_con">
+            <a class="header_link" href="https://demoblog61.blogspot.com/">
+                <h1 class="header_left header_logo" id="header_logo_id">Header2</h1>
+            </a>
+            <div class="header_left_con" id="header_left_con_id">
+                <div class="header_link_con" id="header_link_id">
+                    <div class="close_m_menu">
+                        <button aria-label="clear search input value" class="close_button" id="close_btn"><svg
+                                class="close_menu_svg" fill="none" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 8L8 16M8.00001 8L16 16" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.5"></path>
+                            </svg></button>
+                    </div>
+                    <nav class="header_link">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Post</a></li>
+                            <li><a href="#">Videos</a></li>
+                            <li><a href="#">Images</a></li>
+                            <li><a href="#">Article</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="divider"></div>
+                <div class="search_con" id="search_con_id">
+                    <form action="https://demoblog61.blogspot.com/search"
+                        class="search_input_form search_bar hide_search_bar" target="_top">
+                        <span class="hide_search_bar_button hide_search_bar_button_hide" id="hide_seach_bar_btn">
+                            <svg class="hide_search_bar_svg" fill="none" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6 12H18M6 12L11 7M6 12L11 17" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"></path>
+                            </svg>
+                        </span>
+                        <input aria-label="input fill" autocomplete="off" class="search_input search_input_hide"
+                            id="search_input_value" name="q" placeholder="Search for post..." size="10" title="search"
+                            type="text" value="">
+                        <span class="clear_input_button clear_input_button_hide" id="clear_input_btn">
+                            <svg class="clear_input_svg" fill="none" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 8L8 16M8.00001 8L16 16" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1.5"></path>
+                            </svg>
+                        </span>
+                        <button aria-label="Search button" class="search_button" id="search_btn">
+                            <svg class="search_svg" focusable="false" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z">
+                                </path>
+                            </svg>
+                        </button>
+                    </form>
+                    <div class="api_search_result_con hide_api_search_result_con">
+                        <div class="searching_ani"></div>
+                        <div class="api_search_status">
+                            <span class="found" id="found_text">No post found</span>
+                        </div>
+                        <div class="search_result" id="api_search_result_id">
+                            <div class="content_status">
+                                <span>No post foun</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button aria-label="hamburger menu button" class="mobile_menu_btn hamburger_menu"
+                    id="hamburger_menu_id">
+                    <svg class="hamburger_menu_svg" fill="none" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19 4a1 1 0 01-1 1H2a1 1 0 010-2h16a1 1 0 011 1zm0 6a1 1 0 01-1 1H2a1 1 0 110-2h16a1 1 0 011 1zm-1 7a1 1 0 100-2H2a1 1 0 100 2h16z"
+                            fill-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="section" id="Blog" name="Blog section">
+            <div class="widget Blog" data-version="2" id="Blog1">
+                <div class="blog-posts hfeed container">
+                    <article class="article">
+                        <div class="post">
+                            <script type="application/ld+json">{
+      "@context": "http://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://demoblog61.blogspot.com/2023/11/css-table.html"
+      },
+      "headline": "CSS - Table","description": "Company      Contact      Country            Alfreds Futterkiste      Maria Anders      Germany            Berglunds snabbköp      C...","datePublished": "2023-11-27T21:41:00-08:00",
+      "dateModified": "2023-11-27T21:41:06-08:00","image": {
+        "@type": "ImageObject","url": "https://blogger.googleusercontent.com/img/b/U2hvZWJveA/AVvXsEgfMvYAhAbdHksiBA24JKmb2Tav6K0GviwztID3Cq4VpV96HaJfy0viIu8z1SSw_G9n5FQHZWSRao61M3e58ImahqBtr7LiOUS6m_w59IvDYwjmMcbq3fKW4JSbacqkbxTo8B90dWp0Cese92xfLMPe_tg11g/w1200/",
+        "height": 348,
+        "width": 1200},"publisher": {
+        "@type": "Organization",
+        "name": "Blogger",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://blogger.googleusercontent.com/img/b/U2hvZWJveA/AVvXsEgfMvYAhAbdHksiBA24JKmb2Tav6K0GviwztID3Cq4VpV96HaJfy0viIu8z1SSw_G9n5FQHZWSRao61M3e58ImahqBtr7LiOUS6m_w59IvDYwjmMcbq3fKW4JSbacqkbxTo8B90dWp0Cese92xfLMPe_tg11g/h60/",
+          "width": 206,
+          "height": 60
+        }
+      },"author": {
+        "@type": "Person",
+        "name": "RB"
+      }
+    }</script>
+                            <a name="3154623879985077205"></a>
+                            <h1 class="post-title entry-title">
+                                CSS - Table
+                            </h1>
+                            <div class="post-header">
+                                <div class="post-header-line-1">
+                                    <span class="byline post-author vcard">
+                                        <span class="post-author-label">
+                                            By
+                                        </span>
+                                        <span class="fn">
+                                            <span>RB</span>
+                                        </span>
+                                    </span>
+                                    <span class="byline post-timestamp">
+                                        <meta content="https://demoblog61.blogspot.com/2023/11/css-table.html">
+                                        <a class="timestamp-link"
+                                            href="https://demoblog61.blogspot.com/2023/11/css-table.html" rel="bookmark"
+                                            title="permanent link">
+                                            <time class="published" datetime="2023-11-27T21:41:00-08:00"
+                                                title="2023-11-27T21:41:00-08:00">
+                                                November 27, 2023
+                                            </time>
+                                        </a>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="post-body entry-content float-container" id="post-body-3154623879985077205">
+                                <table id="customers">
+                                    <tbody>
+                                        <tr>
+                                            <th>Company</th>
+                                            <th>Contact</th>
+                                            <th>Country</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Alfreds Futterkiste</td>
+                                            <td>Maria Anders</td>
+                                            <td>Germany</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Berglunds snabbköp</td>
+                                            <td>Christina Berglund</td>
+                                            <td>Sweden</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Centro comercial Moctezuma</td>
+                                            <td>Francisco Chang</td>
+                                            <td>Mexico</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ernst Handel</td>
+                                            <td>Roland Mendel</td>
+                                            <td>Austria</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Island Trading</td>
+                                            <td>Helen Bennett</td>
+                                            <td>UK</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Königlich Essen</td>
+                                            <td>Philip Cramer</td>
+                                            <td>Germany</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Laughing Bacchus Winecellars</td>
+                                            <td>Yoshi Tannamuri</td>
+                                            <td>Canada</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Magazzini Alimentari Riuniti</td>
+                                            <td>Giovanni Rovelli</td>
+                                            <td>Italy</td>
+                                        </tr>
+                                        <tr>
+                                            <td>North/South</td>
+                                            <td>Simon Crowther</td>
+                                            <td>UK</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Paris spécialités</td>
+                                            <td>Marie Bertrand</td>
+                                            <td>France</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="post-bottom">
+                                <div class="post-footer float-container">
+                                    <div class="post-footer-line post-footer-line-1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <section class="comments" data-num-comments="0" id="comments">
+                            <a name="comments"></a>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="no-items section" id="footer" name="Footer"></div>
+    </footer>
+    <script>
+    </script>
+
+
+</body>
+
+</html>
